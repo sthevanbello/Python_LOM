@@ -35,6 +35,30 @@ for k in d2.items():
 for k, v in d2.items():
     print(k, v)
 
+clientes = {
+    'cliente1': {
+        'nome': 'Luiz',
+        'sobrenome': 'Otávio',
+    },
+    'cliente2': {
+        'nome': 'joão',
+        'sobrenome': 'Moreira'
+    },
+}
+
+for cliente_k, cliente_v in clientes.items():
+    print(cliente_k, cliente_v)
+    for nome, sobrenome in cliente_v.items():
+        print(f'{nome}: {sobrenome}')
+
+# clientes.popitem()
+clientes.pop('cliente1')
+
+for cliente_k, cliente_v in clientes.items():
+    print(cliente_k, cliente_v)
+    for nome, sobrenome in cliente_v.items():
+        print(f'{nome}: {sobrenome}')
+
 # Copia rasa. Não copia totalmente. Só a referência
 d1_copy = d1.copy()
 d1_copy['nova_chave'] = 'Novo valor copy'
