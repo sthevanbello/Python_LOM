@@ -1,0 +1,42 @@
+[
+ {
+  "nome": "Marge",
+  "idade": 45
+ },
+ {
+  "nome": "Marge",
+  "idade": 45
+ },
+ {
+  "nome": "Lisa",
+  "idade": 10
+ },
+ {
+  "nome": "Bart",
+  "idade": 12
+ },
+ {
+  "nome": "Lenny",
+  "idade": 42
+ },
+ {
+  "nome": "Burns",
+  "idade": 82
+ },
+ {
+  "nome": "Ned Flanders",
+  "idade": 43
+ },
+ {
+  "nome": "Gengivas sangrentas",
+  "idade": 78
+ },
+ {
+  "nome": "Reverendo",
+  "idade": 50
+ },
+ {
+  "nome": "Milhouse",
+  "idade": 12
+ }
+]
