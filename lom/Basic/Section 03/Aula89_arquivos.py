@@ -1,8 +1,23 @@
-import os
 from dados import pessoas
 import json
+import sys
+import os
+
+try:
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '../'
+            )
+        )
+    )
+except ImportError:
+    pass
+
 
 path = 'D://Developer//Python//udemy//lom//Basic//Section 03//'
+
 
 # file = open(f'{path}abc.txt', 'w+')
 # file.write('Linha 1\n')
