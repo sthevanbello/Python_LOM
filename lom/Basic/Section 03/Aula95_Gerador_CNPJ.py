@@ -57,9 +57,13 @@ def gera():
     inicio_cnpj = f'{primeiro_digito}{segundo_digito}{segundo_bloco}{terceiro_bloco}{quarto_bloco}00'
 
     novo_cnpj = ''.join(map(str, calcula_digito(inicio_cnpj)))
-    return novo_cnpj
+    return formata_cnpj(novo_cnpj)
 
 
+def formata_cnpj(cnpj):
+    cnpj = remover_caracteres(cnpj)
+    formatado = f'{cnpj[0:2]}.{cnpj[2:5]}.{cnpj[5:8]}/{cnpj[8:12]}-{cnpj[12:14]}'
+    return formatado
 
 cnpj1 = '04252011000110'
 cnpj2 = '14038460000113'
