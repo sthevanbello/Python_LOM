@@ -1,9 +1,10 @@
 import re
+import random
 
 
 def valida_cnpj(cnpj):
     cnpj_limpo = remover_caracteres(cnpj)
-    cnpj_calculado = ''.join(map(str, calcula_digito(cnpj_limpo[:-2])))
+    cnpj_calculado = ''.join(map(str, calcula_digito(cnpj_limpo)))
 
     if cnpj_calculado == cnpj_limpo:
         print(f'O CNPJ: {cnpj} é válido')
@@ -24,6 +25,7 @@ def remover_caracteres(cnpj):
 
 
 def calcula_digito(cnpj):
+    cnpj = cnpj[:-2]
     if verifica_sequencia(cnpj):
         lista = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
         cnpj_inteiros = list(map(int, cnpj))
@@ -46,6 +48,19 @@ def aplica_formula(numero):
     return digito
 
 
+def gera():
+    primeiro_digito = random.randint(0, 9)
+    segundo_digito = random.randint(0, 9)
+    segundo_bloco = random.randint(100, 999)
+    terceiro_bloco = random.randint(100, 999)
+    quarto_bloco = '0001'
+    inicio_cnpj = f'{primeiro_digito}{segundo_digito}{segundo_bloco}{terceiro_bloco}{quarto_bloco}00'
+
+    novo_cnpj = ''.join(map(str, calcula_digito(inicio_cnpj)))
+    return novo_cnpj
+
+
+
 cnpj1 = '04252011000110'
 cnpj2 = '14038460000113'
 cnpj3 = '46637543000115'
@@ -65,5 +80,7 @@ cnpj10 = '123rgregreer456'
 # valida_cnpj(cnpj6)
 # valida_cnpj(cnpj7)
 # valida_cnpj(cnpj8)
-valida_cnpj(cnpj9)
-valida_cnpj(cnpj10)
+# valida_cnpj(cnpj9)
+# valida_cnpj(cnpj10)
+cnpj = gera()
+valida_cnpj(cnpj)
