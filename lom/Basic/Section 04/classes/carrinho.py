@@ -13,13 +13,10 @@ class CarrinhoDeCompras:
             print(produto.nome, produto.valor)
 
     def soma_total(self):
-
-        soma = reduce(lambda a, v: v + a, self.__produtos, 0)
         total = 0
         for produto in self.__produtos:
             total += produto.valor
-        # return total
-        return soma
+        return total
 
 
 class Produto:
