@@ -1,0 +1,21 @@
+from classes.cliente import Cliente, Endereco
+
+cliente1 = Cliente('Homer', 45)
+cliente1.insere_endereco('Springfield', 'Oregon')
+cliente1.insere_endereco('São Paulo', 'SP')
+cliente1.insere_endereco('Botucatu', 'SP')
+cliente2 = Cliente('Marge', 45)
+cliente2.insere_endereco('Springfield', 'Oregon')
+cliente2.insere_endereco('Salvador', 'BA')
+cliente3 = Cliente('Bart', 12)
+cliente3.insere_endereco('Springfield', 'Oregon')
+cliente3.insere_endereco('São Caetano', 'SP')
+
+print(cliente1.nome, cliente1.idade)
+cliente1.lista_enderecos()
+print('-'*50)
+print(cliente2.nome, cliente2.idade)
+cliente3.lista_enderecos()
+print('-'*50)
+print(cliente3.nome, cliente3.idade)
+cliente3.lista_enderecos()
